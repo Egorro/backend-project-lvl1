@@ -21,6 +21,7 @@ jobs:
           CI: true
 
       - name: my lint
+        uses: actions/setup-node@v1
         run: npm run test
 
       # Runs the Super-Linter action
