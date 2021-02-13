@@ -21,7 +21,7 @@ jobs:
           CI: true
 
       - name: my lint
-        run: make lint
+        run: npm run test
 
       # Runs the Super-Linter action
       - name: Run Super-Linter
