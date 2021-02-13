@@ -17,9 +17,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: my lint
+        run: make lint
+
       # Runs the Super-Linter action
       - name: Run Super-Linter
-        uses: make lint
+        uses: github/super-linter@v3
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
