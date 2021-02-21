@@ -17,6 +17,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: npm install
+        # Install project
+        run: |
+          make install
+
         env:
           CI: true
 
